@@ -70,3 +70,14 @@ variable "instance_ami" {
   type        = string
   default     = "ami-0d0115d627f8ee8c8"
 }
+
+variable "instance_tags" {
+  description = "Tags to apply to EC2 instance"
+  type        = map(string)
+  default = {
+    Terraform   = "true"
+    Environment = "dev"
+    Owner = "Anand Kirori"
+
+  }
+}
