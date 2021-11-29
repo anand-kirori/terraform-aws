@@ -14,3 +14,13 @@ output "ec2_instance_id" {
   description = "ID of the EC2 instance"
   value       = module.ec2_instances.id
 }
+
+output "security_group_id" {
+  description = "Security Group ID"
+  value = module.custom_service_sg.security_group_id
+}
+
+output "security_group_name" {
+  description = "Security Group Name"
+  value = module.custom_service_sg.security_group_name
+}
